@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='finance.png') }}" alt="Logo">
+            <h1>Logo</h1>
+        </div>
+        <div class="navlinks">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('menu') }}">Menu us</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="nav-btn">
+            <button type="button"><a href="{{ url_for('register') }}">Register</a></button>
+            <button type="button"><a href="{{ url_for('login') }}">Log in</a></button>
+        </div>
+    </nav>
+    <form method="post">
+        <div class="footer">
+            <h1>Contacts</h1>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex architecto sequi doloribus delectus hic officia maiores ipsa nulla. Ipsam mollitia voluptatum similique praesentium provident nemo nesciunt fugit culpa corporis animi, at quos deserunt pariatur, necessitatibus, hic quo obcaecati distinctio quisquam eaque. Possimus rerum iure officiis.</h3>
+            <ul>
+              <li><h3>+7 777 777 77 77</h3></li>
+              <li><h3>+7 777 666 77 77</h3></li>
+              <li><h3>+7 701 777 55 75</h3></li>
+              <li><h3>+7 777 234 12 77</h3></li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas delectus laboriosam maiores ullam? Est possimus iste id nam eos! Commodi dolor officiis quas porro fuga ea aperiam nulla doloremque alias asperiores vitae reiciendis ab, vero assumenda dolorum sint optio ipsam modi qui. Esse voluptates omnis commodi alias mollitia soluta maxime minima sequi veritatis, molestiae quasi, consequatur accusamus tenetur! Neque consequatur praesentium sit possimus cum ipsam ut sequi nam odit molestias deserunt sint voluptate, dolorum, eveniet quas provident fugiat iusto a! Provident facilis qui blanditiis ipsam non quos ex mollitia nostrum, harum laborum quo, perferendis officia optio vitae natus accusamus eos!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dolore nemo illo molestiae quam maxime voluptates consequatur soluta, exercitationem aut ratione nostrum perferendis at odio deserunt quisquam provident, obcaecati molestias? Odio ratione qui facilis? Vel consequatur asperiores iusto in dolore consectetur placeat veniam praesentium earum cupiditate, voluptatibus, itaque corrupti ab repellat molestias, cum veritatis natus vitae numquam. Aspernatur, illum explicabo. Rem illo, eos itaque eveniet incidunt reiciendis, aliquid voluptas nostrum quos quia minus officiis deserunt quis dolores quo laudantium molestiae architecto nihil! Praesentium nulla, temporibus minima cupiditate, numquam quis harum et fugit provident laudantium voluptate veritatis asperiores a modi dolorum obcaecati sunt? Ad nihil enim voluptatibus vero, voluptas soluta impedit nemo, ut accusamus velit obcaecati deserunt sed, ea autem expedita a eligendi. Molestias veritatis dicta, vero eum tempore ea perspiciatis ullam nulla, harum, ex delectus inventore quis aliquid? Facilis, voluptatum repellat sequi quia vel animi neque ratione nemo sapiente ipsa consectetur perspiciatis incidunt magni dolores suscipit debitis? Molestiae reprehenderit aut corrupti quam velit, laborum ratione possimus asperiores error minima quae excepturi voluptates fugit quis ex alias cumque voluptatibus?</p>
+        </div>
+    </form>
+</body>
+</html>

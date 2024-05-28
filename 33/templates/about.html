@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+  </head>
+  <body>
+    <nav class="b">
+      <div class="logo">
+        <img
+          src="{{ url_for('static', filename='img/logo.png') }}"
+          alt=""
+          class="logoimg"
+        />
+        <h1>Logo</h1>
+      </div>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('about') }}">About us</a>
+      <a href="{{ url_for('contact') }}">Contacts</a>
+    </nav>
+
+    <div class="header__main">
+      <div class="header__main__description">
+        <img src="{{ url_for('static', filename='img/pokemon.png') }}" alt="" class="image__title" />
+        <p class="subtitle">
+          Pokemon Go - это игра на телефоне в которой можно ловить много новых
+          покемонов, это игра очень мотивирует выходить игроков на улицу для
+          поимки новых друзей.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

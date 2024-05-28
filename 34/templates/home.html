@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='finance.png') }}" alt="Logo" />
+        <h1>Logo</h1>
+      </div>
+      <div class="navlinks">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('menu') }}">Menu us</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+      </div>
+      <div class="nav-btn">
+        <button type="button">
+          <a href="{{ url_for('register') }}">Register</a>
+        </button>
+        <button type="button">
+          <a href="{{ url_for('login') }}">Log in</a>
+        </button>
+      </div>
+    </nav>
+    <form method="post" class="footer">
+      <div class="footer--info">
+        <h1>Welcome to our Finance App!</h1>
+        <p class="text">
+          We're thrilled to have you join us on your journey towards financial
+          empowerment. Whether you're aiming to save for a dream vacation, pay
+          off debt, or simply gain better control over your finances, our app is
+          here to support you every step of the way.
+        </p>
+        <p class="text">
+          So go ahead, take control of your financial future, and let our app be
+          your trusted companion on the path to financial success. Welcome
+          aboard!
+        </p>
+      </div>
+      <div class="circle">
+        <canvas id="percentageCircle" width="400" height="400"></canvas>
+      </div>
+    </form>
+    <script>
+      let remaining = 100 - {{ percent }};
+      let expense = {{ percent }};
+      let canvas = document.getElementById('percentageCircle');
+      let context = canvas.getContext('2d');
+      let centerX = canvas.width / 2;
+      let centerY = canvas.height / 2;
+      let radius = canvas.width / 2 - 10;
+
+      context.beginPath();
+      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = 'lightblue';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = '#000000';
+      context.stroke();
+
+      context.font = "20px Arial";
+      context.fillStyle = 'black';
+      context.textAlign = 'center';
+      context.fillText(Math.floor(remaining) + "%", centerX + radius - 10, centerY - 150); 
+      context.fillText(Math.floor(expense) + "%", centerX + radius - 10, centerY + 150); 
+
+
+      context.beginPath();
+      context.moveTo(centerX, centerY);
+      context.arc(centerX, centerY, radius, 0, (2 * Math.PI) * (expense / 100), false);
+      context.fillStyle = 'blue';
+      context.fill();
+    </script>
+  </body>
+</html>

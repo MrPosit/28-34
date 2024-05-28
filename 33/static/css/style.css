@@ -1,0 +1,74 @@
+*, html, body{
+    background-color: rgb(220, 241, 245);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.logoimg{
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.logo{
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+.b{
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+
+}
+.log{
+    display: flex;
+    gap: 20px;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+.title2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+    height: 450px;
+    background-color: rgb(153, 226, 249);
+    padding: 30px;
+    border-radius: 7px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    color: rgb(49, 138, 158);
+}
+h4{
+    background-color: rgb(153, 226, 249);
+
+}
